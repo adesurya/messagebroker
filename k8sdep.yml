@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: messagebrokeredcandroid
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: messagebrokeredcandroid
+  template:
+    metadata:
+      labels:
+        app: messagebrokeredcandroid
+    spec:
+      containers:
+        - name: messagebrokeredcandroid
+          image: adesurya/messagebrokeredcandroid:latest
+          ports:
+            - containerPort: 8161
+              #conrainerPort1
+            - containerPort: 9404
+              #conrainerPort2
+            - containerPort: 61616
+              #conrainerPort3
+            - containerPort: 5445
+              #conrainerPort4
+            - containerPort: 5672
+              #conrainerPort5
+            - containerPort: 1883
+              #conrainerPort6
+            - containerPort: 61613
+              #conrainerPort7
