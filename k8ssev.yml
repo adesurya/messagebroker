@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: messagebrokeredcandroid
+  name: messagebrokeredc
 spec:
   ports:
   - name: port1
@@ -26,5 +26,5 @@ spec:
     port: 61613
     targetPort: 61613
   selector:
-    app: messagebrokeredcandroid
+    app: messagebrokeredc
   type: NodePort
