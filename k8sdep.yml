@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: messagebrokeredcandroid
+  name: messagebrokeredc
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: messagebrokeredcandroid
+      app: messagebrokeredc
   template:
     metadata:
       labels:
-        app: messagebrokeredcandroid
+        app: messagebrokeredc
     spec:
       containers:
-        - name: messagebrokeredcandroid
-          image: adesurya/messagebrokeredcandroid:latest
+        - name: messagebrokeredc
+          image: adesurya/messagebrokeredc:latest
           ports:
             - containerPort: 8161
               #conrainerPort1
